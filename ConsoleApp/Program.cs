@@ -12,6 +12,7 @@ namespace ConsoleApp
             Console.WriteLine("  2. Abstract");
             Console.WriteLine("  3. Polymorphism");
             Console.WriteLine("  4. Ueberladen");
+            Console.WriteLine("  5. Abstract Factory");
             Console.Write(" Your choice: ");
 
 
@@ -39,6 +40,9 @@ namespace ConsoleApp
                     var ueberladen = new UeberladenUseCase();
                     break;
 
+                case ConsoleKey.D5:
+                    var abstractFactoryUseCase = new AbstractFactoryUseCase();
+                    break;
 
                 default:
                     Console.WriteLine("NOTHING was selected to execute");
