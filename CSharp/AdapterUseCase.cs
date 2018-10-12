@@ -9,35 +9,35 @@ namespace CSharp
         public AdapterUseCase()
         {
 
-            Target target = new Adapter();
+            TargetInterface target = new Adapter();
             target.Request();
 
             Console.ReadKey();
 
         }
 
-        class Target
+        class TargetInterface
 
         {
             public virtual void Request()
             {
-                Console.WriteLine("Called Target Request()");
+                Console.WriteLine("Called TargetInterface Request()");
             }
         }
 
 
 
-        class Adapter : Target
+        class Adapter : TargetInterface
 
         {
-            private Adaptee _adaptee = new Adaptee();
+            private AdapteeInterface _adaptee = new AdapteeInterface();
 
             public override void Request()
             {
                 _adaptee.SpecificRequest();
             }
         }
-        class Adaptee
+        class AdapteeInterface
 
         {
             public void SpecificRequest()
